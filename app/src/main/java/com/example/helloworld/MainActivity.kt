@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val rollButton : Button = findViewById(R.id.roll_button)
-        rollButton.setOnClickListener( rollDie() )
+        rollButton.setOnClickListener { rollDie() }
     }
 
     private fun rollDie() {
