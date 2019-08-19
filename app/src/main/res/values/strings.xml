@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">DiceRoller</string>
+
     <string name="roll_label">Roll</string>
+    <string name="count_up_label">Count up</string>
+
+    <string name="greeting">Hello World!</string>
+    <string name="result_random">Die rolled!</string>
+    <string name="result_up">Count upped manually!</string>
+    <string name="result_max">Ceiling reached!</string>
 </resources>
