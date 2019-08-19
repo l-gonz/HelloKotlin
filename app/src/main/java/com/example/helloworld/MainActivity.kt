@@ -21,14 +21,16 @@ class MainActivity : AppCompatActivity() {
 
         val countUpButton : Button = findViewById(R.id.count_up_button)
         countUpButton.setOnClickListener { countUp() }
+
+        val resetButton : Button = findViewById(R.id.reset_button)
+        resetButton.setOnClickListener { reset() }
     }
 
     private fun rollDie()
     {
         count = Random().nextInt(MAX_COUNT) + 1
 
-        val resultText : TextView = findViewById(R.id.result_text)
-        resultText.text = "Number is $count"
+        setText("Number is $count")
         Toast.makeText(this, (R.string.result_random), Toast.LENGTH_SHORT).show()
     }
 
@@ -41,8 +43,19 @@ class MainActivity : AppCompatActivity() {
         }
         count++
 
-        val resultText : TextView = findViewById(R.id.result_text)
-        resultText.text = "Number is $count"
+        setText("Number is $count")
         Toast.makeText(this, (R.string.result_up), Toast.LENGTH_SHORT).show()
+    }
+
+    private fun reset()
+    {
+        count = 0
+        setText(getString(R.string.greeting))
+    }
+
+    private fun setText(text : String)
+    {
+        val resultText : TextView = findViewById(R.id.result_text)
+        resultText.text = text
     }
 }
